@@ -10,4 +10,9 @@ export class UsersController {
   login(@Body() loginUserDto: LoginUserDto) {
     return this.usersService.login(loginUserDto);
   }
+
+  @Post('/test_login')
+  test_login(@Body() loginUserDto: LoginUserDto) {
+    return "Test login" 
+  }
 }
