@@ -12,7 +12,7 @@ import { Constants } from 'src/utils/Constants';
   imports: [MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]), PassportModule,
   JwtModule.register({
     secret: Constants.SECRET,
-    signOptions: { expiresIn: '3000s' },
+    signOptions: { expiresIn: Constants.EXPIRES_IN },
   }),],
   controllers: [UsersController],
   providers: [UsersService, JwtStrategy],
